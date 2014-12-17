@@ -15,35 +15,35 @@ public class MethodPrinter extends MethodAdapter {
 	public void setException(String e) {
 		this.exceptionThrown = e;
 	}
-	public void visitMethodInsn(int opcode, String owner, String name,
-			String desc) {
-		if(name.equals("<init>"))
-			System.out.println("Construtor de "+ owner);
-		super.visitMethodInsn(opcode, owner, name, desc);
-		System.out.println("opcode: "+opcode+" owner: "+owner+" name: "+name+" desc: "+desc);
-	}
+//	public void visitMethodInsn(int opcode, String owner, String name,
+//			String desc) {
+//		if(name.equals("<init>"))
+//			System.out.println("Construtor de "+ owner);
+//		super.visitMethodInsn(opcode, owner, name, desc);
+//		System.out.println("opcode: "+opcode+" owner: "+owner+" name: "+name+" desc: "+desc);
+//	}
 	
 //	public void visitMaxs(int maxStack, int maxLocals) {
 //		System.out.println("Max size of the stack: "+maxStack + " Max # of local varialbe "+maxLocals);
 //    }
 	
-	@Override
-	public void visitInsn(int arg0) {
-		// TODO Auto-generated method stub
-		if(arg0 == Opcodes.ATHROW)
-			System.out.println("Throw exception");
-		super.visitInsn(arg0);
-	}
+//	@Override
+//	public void visitInsn(int arg0) {
+//		// TODO Auto-generated method stub
+//		if(arg0 == Opcodes.ATHROW)
+//			System.out.println("Throw exception");
+//		super.visitInsn(arg0);
+//	}
 	
-	@Override
-	public void visitTryCatchBlock(Label arg0, Label arg1, Label arg2,
-			String type) {
-		// TODO Auto-generated method stub
-		super.visitTryCatchBlock(arg0, arg1, arg2, type);
-		System.out.println("visit trycatch block "+type);
-		System.out.println("Exception thrown: "+ this.exceptionThrown);
-		//this.visitInsn(Opcodes.ATHROW);
-	}
+//	@Override
+//	public void visitTryCatchBlock(Label arg0, Label arg1, Label arg2,
+//			String type) {
+//		// TODO Auto-generated method stub
+//		super.visitTryCatchBlock(arg0, arg1, arg2, type);
+//		System.out.println("visit trycatch block "+type);
+//		System.out.println("Exception thrown: "+ this.exceptionThrown);
+//		//this.visitInsn(Opcodes.ATHROW);
+//	}
 //	public void visitLabel(final Label label) {
 //		System.out.println("Label: "+label);
 //		super.visitLabel(label);
