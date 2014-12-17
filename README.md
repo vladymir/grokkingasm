@@ -2,6 +2,7 @@ grokkingasm
 ===========
 
 ## Metodo analisado
+```
 void metodoTres()  {
 		try{
 			ClassReader cr = new ClassReader(new FileInputStream("test.class"));
@@ -13,9 +14,11 @@ void metodoTres()  {
 			throw ex;
 		}
 }
-
+```
 ## Output
+```
 metodoTres()V
 Throw exception
 java/lang/IllegalArgumentException
 }
+```
